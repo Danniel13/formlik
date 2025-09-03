@@ -76,9 +76,176 @@
           <option value="">Selecciona una opción</option>
           <option value="Mujer">Mujer</option>
           <option value="Hombre">Hombre</option>
-          <option value="No binario">No binario</option>
+          <option value="No_binario">No binario</option>
+          <option value="no_especificar">Prefiero no especificar</option>
         </select>
       </div>
+      <div class="container my-5 text-center">
+ <h2 class="mb-4">Ahora profundicemos en tu perfil!</h2>
+    
+      <p class="lead">
+        Queremos conocerte más a fondo, por eso en esta sección te preguntaremos sobre tu nivel de estudios,
+        tu experiencia y el perfil al que te gustaría aspirar dentro de LikeU. ¡Vamos!
+    </p>
+    
+</div>
+
+<div class="mb-3">
+  <label class="form-label">¿Cuál es tu nivel de estudios más alto? *</label>
+  <select class="form-select" id="nivel_estudios" name="nivel_estudios" required>
+    <option value="">Selecciona una opción</option>
+    <option value="Bachillerato">Bachillerato</option>
+    <option value="5to_semestre">5to semestre de una carrera o más / sin graduar</option>
+    <option value="Tecnico">Técnico</option>
+    <option value="Tecnologo">Tecnólogo</option>
+    <option value="Profesional">Profesional</option>
+    <option value="Especialista">Especialista</option>
+    <option value="Maestria">Maestría</option>
+    <option value="Doctorado">Doctorado</option>
+  </select>
+</div>
+
+<!-- Formación -->
+<div class="mb-3">
+  <label class="form-label">¿Cuál es tu formación? *</label>
+  <input type="text" class="form-control" id="formacion" name="formacion" required>
+</div>
+
+<!-- Experiencia comercial -->
+<div class="mb-3">
+  <label class="form-label">¿Has tenido experiencia comercial (en ventas)? ¿Cuánto tiempo? *</label>
+  <select class="form-select" id="exp_comercial" name="exp_comercial" required>
+    <option value="">Selecciona una opción</option>
+    <option value="Ninguna">Ninguna</option>
+    <option value="Sin_exp">No tengo experiencia, pero sí la chispa y las ganas de ser comercial</option>
+    <option value="Menos_6m">Menos de 6 meses</option>
+    <option value="6m_1año">De 6 meses a 1 año</option>
+    <option value="1año_2años">De 1 año a 2 años</option>
+    <option value="2años_mas">2 años o más</option>
+  </select>
+</div>
+
+<!-- Experiencia telefónica -->
+<div class="mb-3">
+  <label class="form-label">¿Tienes experiencia comercial en modalidad telefónica? *</label>
+  <select class="form-select" id="exp_telefonica" name="exp_telefonica" required>
+    <option value="">Selecciona una opción</option>
+    <option value="No">No</option>
+    <option value="Sin_exp">Ninguna pero aprendo fácil</option>
+    <option value="Menos_6m">Menos de 6 meses</option>
+    <option value="6m_1año">De 6 meses a 1 año</option>
+    <option value="1año_2años">De 1 año a 2 años</option>
+    <option value="2años_mas">De 2 años o más</option>
+  </select>
+</div>
+
+<!-- Computador e internet -->
+<div class="mb-3">
+  <label class="form-label">¿Cuentas con computador e internet? *</label>
+  <select class="form-select" id="computador_internet" name="computador_internet" required>
+    <option value="">Selecciona una opción</option>
+    <option value="Si">Sí</option>
+    <option value="No">No</option>
+  </select>
+</div>
+
+<!-- Hoja de vida -->
+<div class="mb-3">
+  <label class="form-label">
+    Compártenos tu Hoja de Vida completa y actualizada, asegúrate que cuente con la información
+    necesaria para conocer muy bien tu perfil y experiencia. *
+  </label>
+
+  <div class="file-upload-wrapper">
+    <label for="hoja_vida" class="custom-upload">📂 Seleccionar archivo</label>
+    <span id="file-name">Ningún archivo seleccionado</span>
+    <input type="file" id="hoja_vida" name="hoja_vida"
+           accept=".pdf" required hidden>
+  </div>
+
+  <small style="color: #9ff4f8;">
+    Formatos aceptados: PDF. Tamaño máximo: 10 MB.
+  </small>
+</div>
+<div class="container my-5 text-center">
+ <h2 class="mb-4">¡Es hora de que brilles!</h2>
+  <p class="lead">
+        ¡Estamos felices de verte en acción!
+    </p>
+</div>
+<div class="mb-3">
+  <label class="form-label">
+    En un video de menos de dos minutos. Cuéntanos ¿Quién eres más allá de tu trabajo u oficio?
+    Compártenos algo sobre ti (dónde vives, a qué te dedicas, algo curioso sobre ti...)
+    y ¿Por qué te genera valor gestionar en remoto? *
+  </label>
+
+  <div class="file-upload-wrapper">
+    <label for="video_presentacion" class="custom-upload">📹 Seleccionar archivo</label>
+    <span id="file-video-presentacion">Ningún archivo seleccionado</span>
+    <input type="file" id="video_presentacion" name="video_presentacion"
+           accept="video/*" required hidden>
+  </div>
+
+  <small style="color: #9ff4f8;">
+    Formatos aceptados: video. Tamaño máximo: 15 MB.
+  </small>
+</div>
+
+<!-- Audio lectura -->
+<div class="mb-3">
+  <label class="form-label">
+    Esta lectura parece sin sentido, ¡pero no es así! <br>
+    Te pedimos que nos envíes un audio leyendo este texto. <br>
+    Sí, así de sencillo, ¡solo léelo! *
+  </label>
+
+ <!-- Imagen miniatura -->
+  <div style="margin: 15px 0; text-align: center;">
+    <img src="assets/lectura.png" 
+         alt="Texto de lectura" 
+         id="lectura-img"
+         style="max-width: 100%; height: auto; cursor: pointer; border: 2px solid #ddd; border-radius: 8px;">
+    <p style="font-size: 14px; color: #aaa;">(Haz clic para ampliar)</p>
+  </div>
+
+  
+  
+
+  <div class="file-upload-wrapper">
+    <label for="audio_lectura" class="custom-upload">🎙️ Seleccionar archivo</label>
+    <span id="file-audio-lectura">Ningún archivo seleccionado</span>
+    <input type="file" id="audio_lectura" name="audio_lectura"
+           accept="audio/*" required hidden>
+  </div>
+
+  <small style="color: #9ff4f8;">
+    Formatos aceptados: audio. Tamaño máximo: 15 MB.
+  </small>
+</div>
+
+<!-- Audio comercial -->
+<div class="mb-3">
+  <label class="form-label">
+    Lúcete con tu habilidad comercial y graba un audio de máximo 2 minutos vendiendo una mentoría financiera.  
+    En tu ejercicio ten en cuenta:  
+    1. ¿Qué preguntas harías para conocer a tu cliente?  
+    2. Cómo argumentarías las ventajas de la mentoría según tu cliente.  
+    3. Cómo manejarías la objeción "no tengo dinero" o "no tengo tiempo".  
+    4. Cómo cerrarías la venta comercialmente para que compren la mentoría. *
+  </label>
+
+  <div class="file-upload-wrapper">
+    <label for="audio_comercial" class="custom-upload">🎤 Seleccionar archivo</label>
+    <span id="file-audio-comercial">Ningún archivo seleccionado</span>
+    <input type="file" id="audio_comercial" name="audio_comercial"
+           accept="audio/*" required hidden>
+  </div>
+
+  <small style="color: #9ff4f8;">
+    Formatos aceptados: audio. Tamaño máximo: 15 MB.
+  </small>
+</div>
 
       <!-- Botón -->
       <div class="text-center mt-4">
@@ -86,10 +253,16 @@
       </div>
 
     </form>
+    
   </div>
+  <div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./js/index.js"></script>
 </body>
+
 </html>
